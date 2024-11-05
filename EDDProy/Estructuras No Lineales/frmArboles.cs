@@ -14,7 +14,7 @@ using System.Xml.Linq;
 
 //using GraphVizWrapper;
 //using GraphVizWrapper.Queries;
-//using GraphVizWrapper.Commands;
+//using GraphVizWrapper.Commands;   
 
 //using csdot;
 //using csdot.Attributes.DataTypes;
@@ -218,6 +218,11 @@ namespace EDDemo.Estructuras_No_Lineales
             {
                 lblDatos.Text = "Ingrese un número válido.";
             }
+        }
+
+        private void btPodar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

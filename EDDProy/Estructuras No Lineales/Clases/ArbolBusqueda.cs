@@ -72,6 +72,16 @@ namespace EDDemo.Estructuras_No_Lineales
             strArbol = strArbol + nodo.Dato.ToString() + "\r\n";
             MuestraArbolAcostado(nivel + 1, nodo.Izq);
         }
+       
+        public void PodarArbol()
+        {
+            if (Raiz == null)
+            {
+                MessageBox.Show("el arbol esta vacio");
+                return;
+            }
+
+        }
 
         public  String ToDot(NodoBinario nodo)
         {
