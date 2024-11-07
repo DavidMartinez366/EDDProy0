@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -160,7 +161,7 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btnCrearArbol_Click(object sender, EventArgs e)
         {
-            //Limpiamos los objetos y clases del anterior arbol
+            
             miArbol = null;
             miRaiz = null;
             miArbol = new ArbolBusqueda();
@@ -175,23 +176,23 @@ namespace EDDemo.Estructuras_No_Lineales
             {
                 int Dato = rnd.Next(1, 100);
 
-                // Obtenemos el nodo Raiz del arbol
+                
                 miRaiz = miArbol.RegresaRaiz();
 
-                // Verificar si el dato ya existe en el árbol
+                
                 if (!miArbol.BuscarNodo(Dato, miRaiz))
                 {
-                    // Si el dato no existe, se inserta
+                    
                     miArbol.InsertaNodo(Dato, ref miRaiz);
                 }
                 else
                 {
-                    // Si el dato ya existe, se salta la inserción y pasa al siguiente número
-                    nNodos--; // Disminuir el contador para intentar agregar un nodo adicional
+                    
+                    nNodos--; 
                 }
             }
 
-            // Leer arbol completo y mostrarlo en caja de texto
+            
             miArbol.MuestraArbolAcostado(1, miRaiz);
             txtArbol.Text = miArbol.strArbol;
 
@@ -202,13 +203,13 @@ namespace EDDemo.Estructuras_No_Lineales
         {
             int valor;
 
-            // Intentar convertir el valor ingresado en el TextBox a entero
+            
             if (int.TryParse(txtBuscar.Text, out valor))
             {
-                // Llamar al método BuscarNodo y obtener el resultado
+                
                 bool encontrado = miArbol.BuscarNodo(valor, miArbol.RegresaRaiz());
 
-                // Mostrar el resultado en un Label
+               
                 if (encontrado)
                     MessageBox.Show("valor si existe en el arbol");
                 else
@@ -222,7 +223,105 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btPodar_Click(object sender, EventArgs e)
         {
+            miArbol.PodarHojas();
+            miArbol.strArbol = ""; 
+            miArbol.MuestraArbolAcostado(0, miArbol.RegresaRaiz());
+            txtArbol.Text = miArbol.strArbol;
+        }
+
+        private void btPodarT_Click(object sender, EventArgs e)
+        {
+            miArbol.podarArbol();
+            miArbol.strArbol = "";
+            miArbol.MuestraArbolAcostado(0, miArbol.RegresaRaiz());
+            txtArbol.Text = miArbol.strArbol;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int valor))
+            {
+                
+                miArbol.EliminarNodo(valor);
+
+               
+                miArbol.strArbol = ""; 
+                miArbol.MuestraArbolAcostado(0, miRaiz); 
+                txtArbol.Text = miArbol.strArbol; 
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un valor válido para eliminar.");
+            }
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox2.Text, out int valor))
+            {
+                
+                miArbol.EliminarNodoConSucesor(valor);
+
+                
+                miArbol.strArbol = ""; 
+                miArbol.MuestraArbolAcostado(0, miRaiz); 
+                txtArbol.Text = miArbol.strArbol; 
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un valor válido para eliminar.");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            
+            string resultado = miArbol.RecorrerPorNiveles(miRaiz);
+            label2.Text = resultado;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+           
+            int altura = miArbol.ObtenerAltura(miRaiz);
+
+           
+            label4.Text = "Altura del árbol: " + altura.ToString();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            int cantidadHojas = miArbol.ContarHojas(miRaiz);
+
+            
+           label5.Text = "Cantidad de hojas: " + cantidadHojas;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int cantidadNodos = miArbol.ContarNodos(miRaiz);
+
+            label8.Text = "nodos " + cantidadNodos;
+        }
     }
-}
+    }
