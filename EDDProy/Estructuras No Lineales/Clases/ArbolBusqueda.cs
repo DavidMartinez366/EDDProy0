@@ -79,20 +79,20 @@ namespace EDDemo.Estructuras_No_Lineales
             if (nodo == null)
                 return;
 
-            
+
             if (nodo.Izq != null && nodo.Izq.Izq == null && nodo.Izq.Der == null)
                 nodo.Izq = null;
             else
-                PodarHojas(ref nodo.Izq); 
+                PodarHojas(ref nodo.Izq);
 
-            
+
             if (nodo.Der != null && nodo.Der.Izq == null && nodo.Der.Der == null)
                 nodo.Der = null;
             else
-                PodarHojas(ref nodo.Der); 
-        
+                PodarHojas(ref nodo.Der);
 
-    }
+
+        }
         public void PodarHojas()
         {
             if (Raiz == null)
@@ -121,7 +121,7 @@ namespace EDDemo.Estructuras_No_Lineales
             podarArbol(Raiz);
             Raiz = null;
         }
-        public  String ToDot(NodoBinario nodo)
+        public String ToDot(NodoBinario nodo)
         {
             StringBuilder b = new StringBuilder();
             if (nodo.Izq != null)
@@ -137,7 +137,7 @@ namespace EDDemo.Estructuras_No_Lineales
             }
             return b.ToString();
         }
-       
+
 
         private void EliminarNodo(ref NodoBinario nodo, int valor)
         {
@@ -146,37 +146,37 @@ namespace EDDemo.Estructuras_No_Lineales
 
             if (valor < nodo.Dato)
             {
-                
+
                 EliminarNodo(ref nodo.Izq, valor);
             }
             else if (valor > nodo.Dato)
             {
-                
+
                 EliminarNodo(ref nodo.Der, valor);
             }
-            else 
+            else
             {
                 if (nodo.Izq == null && nodo.Der == null)
                 {
-                    
+
                     nodo = null;
                 }
                 else if (nodo.Izq != null && nodo.Der == null)
                 {
-                    
+
                     nodo = nodo.Izq;
                 }
                 else if (nodo.Izq == null && nodo.Der != null)
                 {
-                   
+
                     nodo = nodo.Der;
                 }
                 else
                 {
-                    
+
                     NodoBinario predecesor = ObtenerPredecesor(nodo.Izq);
-                    nodo.Dato = predecesor.Dato; 
-                    EliminarNodo(ref nodo.Izq, predecesor.Dato); 
+                    nodo.Dato = predecesor.Dato;
+                    EliminarNodo(ref nodo.Izq, predecesor.Dato);
                 }
 
             }
@@ -192,37 +192,37 @@ namespace EDDemo.Estructuras_No_Lineales
 
             if (valor < nodo.Dato)
             {
-               
+
                 EliminarNodoConSucesor(ref nodo.Izq, valor);
             }
             else if (valor > nodo.Dato)
             {
-                
+
                 EliminarNodoConSucesor(ref nodo.Der, valor);
             }
-            else 
+            else
             {
                 if (nodo.Izq == null && nodo.Der == null)
                 {
-                    
+
                     nodo = null;
                 }
                 else if (nodo.Izq != null && nodo.Der == null)
                 {
-                   
+
                     nodo = nodo.Izq;
                 }
                 else if (nodo.Izq == null && nodo.Der != null)
                 {
-                   
+
                     nodo = nodo.Der;
                 }
                 else
                 {
-                   
+
                     NodoBinario sucesor = ObtenerSucesor(nodo.Der);
-                    nodo.Dato = sucesor.Dato; 
-                    EliminarNodoConSucesor(ref nodo.Der, sucesor.Dato); 
+                    nodo.Dato = sucesor.Dato;
+                    EliminarNodoConSucesor(ref nodo.Der, sucesor.Dato);
                 }
             }
         }
@@ -256,12 +256,12 @@ namespace EDDemo.Estructuras_No_Lineales
             Queue<NodoBinario> cola = new Queue<NodoBinario>();
             StringBuilder resultado = new StringBuilder();
 
-            cola.Enqueue(raiz); 
+            cola.Enqueue(raiz);
 
             while (cola.Count > 0)
             {
                 NodoBinario nodoActual = cola.Dequeue();
-                resultado.Append(nodoActual.Dato + " "); 
+                resultado.Append(nodoActual.Dato + " ");
 
                 if (nodoActual.Izq != null)
                     cola.Enqueue(nodoActual.Izq);
@@ -274,43 +274,43 @@ namespace EDDemo.Estructuras_No_Lineales
         public int ObtenerAltura(NodoBinario nodo)
         {
             if (nodo == null)
-                return 0; 
+                return 0;
 
             int alturaIzquierda = ObtenerAltura(nodo.Izq);
             int alturaDerecha = ObtenerAltura(nodo.Der);
 
-            
+
             return Math.Max(alturaIzquierda, alturaDerecha) + 1;
         }
 
         public int ContarHojas(NodoBinario nodo)
         {
             if (nodo == null)
-                return 0; 
+                return 0;
 
-            
+
             if (nodo.Izq == null && nodo.Der == null)
             {
-                return 1;  
+                return 1;
             }
 
-            
+
             int hojasIzq = ContarHojas(nodo.Izq);
             int hojasDer = ContarHojas(nodo.Der);
 
-            
+
             return hojasIzq + hojasDer;
         }
         public int ContarNodos(NodoBinario nodo)
         {
             if (nodo == null)
-                return 0;  
+                return 0;
 
-            
+
             int nodosIzq = ContarNodos(nodo.Izq);
             int nodosDer = ContarNodos(nodo.Der);
 
-            
+
             return 1 + nodosIzq + nodosDer;
         }
         public class ArbolBinarioCompleto
@@ -329,11 +329,11 @@ namespace EDDemo.Estructuras_No_Lineales
                 if (nodo == null)
                     return true;
 
-               
+
                 if (indice >= totalNodos)
                     return false;
 
-                
+
                 return EsCompletoRecursivo(nodo.Izq, 2 * indice + 1, totalNodos) &&
                        EsCompletoRecursivo(nodo.Der, 2 * indice + 2, totalNodos);
             }
@@ -361,15 +361,15 @@ namespace EDDemo.Estructuras_No_Lineales
                 if (nodo == null)
                     return true;
 
-                
+
                 if (nodo.Izq == null && nodo.Der == null)
                     return nivelActual == altura - 1;
 
-                
+
                 if (nodo.Izq == null || nodo.Der == null)
                     return false;
 
-                
+
                 return EsLlenoRecursivo(nodo.Izq, nivelActual + 1, altura) &&
                        EsLlenoRecursivo(nodo.Der, nivelActual + 1, altura);
             }
@@ -381,9 +381,9 @@ namespace EDDemo.Estructuras_No_Lineales
                 return 1 + Math.Max(ObtenerAltura(nodo.Izq), ObtenerAltura(nodo.Der));
             }
         }
-    
 
-    public void PreOrden(NodoBinario nodo)
+
+        public void PreOrden(NodoBinario nodo)
 
         {
             if (nodo == null)
@@ -392,7 +392,7 @@ namespace EDDemo.Estructuras_No_Lineales
             strRecorrido = strRecorrido + nodo.Dato + ", ";
             PreOrden(nodo.Izq);
             PreOrden(nodo.Der);
-            
+
             return;
         }
 
@@ -407,7 +407,7 @@ namespace EDDemo.Estructuras_No_Lineales
 
             return;
         }
-        public void PostOrden(NodoBinario nodo )
+        public void PostOrden(NodoBinario nodo)
         {
             if (nodo == null)
                 return;
@@ -417,7 +417,7 @@ namespace EDDemo.Estructuras_No_Lineales
             strRecorrido = strRecorrido + nodo.Dato + ", ";
 
             return;
-         }
+        }
 
     }
 }
