@@ -64,12 +64,16 @@ namespace EDDemo.Estructuras_No_Lineales
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDato
             // 
-            this.txtDato.Location = new System.Drawing.Point(42, 16);
+            this.txtDato.Location = new System.Drawing.Point(41, 11);
             this.txtDato.Margin = new System.Windows.Forms.Padding(2);
             this.txtDato.Multiline = true;
             this.txtDato.Name = "txtDato";
@@ -78,7 +82,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(104, 16);
+            this.btnAgregar.Location = new System.Drawing.Point(103, 11);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(62, 24);
@@ -98,13 +102,13 @@ namespace EDDemo.Estructuras_No_Lineales
             this.txtArbol.Multiline = true;
             this.txtArbol.Name = "txtArbol";
             this.txtArbol.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtArbol.Size = new System.Drawing.Size(468, 299);
+            this.txtArbol.Size = new System.Drawing.Size(575, 367);
             this.txtArbol.TabIndex = 2;
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimpiar.Location = new System.Drawing.Point(397, 11);
+            this.btnLimpiar.Location = new System.Drawing.Point(504, 11);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(62, 24);
@@ -116,7 +120,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // btnGrafica
             // 
             this.btnGrafica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrafica.Location = new System.Drawing.Point(397, 48);
+            this.btnGrafica.Location = new System.Drawing.Point(504, 48);
             this.btnGrafica.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Size = new System.Drawing.Size(62, 24);
@@ -127,7 +131,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnRecorrer
             // 
-            this.btnRecorrer.Location = new System.Drawing.Point(104, 85);
+            this.btnRecorrer.Location = new System.Drawing.Point(103, 80);
             this.btnRecorrer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRecorrer.Name = "btnRecorrer";
             this.btnRecorrer.Size = new System.Drawing.Size(62, 32);
@@ -139,7 +143,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(6, 21);
+            this.lblDatos.Location = new System.Drawing.Point(5, 16);
             this.lblDatos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(36, 13);
@@ -148,7 +152,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnCrearArbol
             // 
-            this.btnCrearArbol.Location = new System.Drawing.Point(104, 48);
+            this.btnCrearArbol.Location = new System.Drawing.Point(103, 43);
             this.btnCrearArbol.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearArbol.Name = "btnCrearArbol";
             this.btnCrearArbol.Size = new System.Drawing.Size(62, 34);
@@ -160,7 +164,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // txtNodos
             // 
             this.txtNodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNodos.Location = new System.Drawing.Point(40, 54);
+            this.txtNodos.Location = new System.Drawing.Point(39, 49);
             this.txtNodos.Margin = new System.Windows.Forms.Padding(2);
             this.txtNodos.Minimum = new decimal(new int[] {
             1,
@@ -179,7 +183,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblPostOrden
             // 
             this.lblPostOrden.AutoSize = true;
-            this.lblPostOrden.Location = new System.Drawing.Point(171, 69);
+            this.lblPostOrden.Location = new System.Drawing.Point(170, 64);
             this.lblPostOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPostOrden.Name = "lblPostOrden";
             this.lblPostOrden.Size = new System.Drawing.Size(60, 13);
@@ -189,7 +193,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblRecorridoPostOrden
             // 
             this.lblRecorridoPostOrden.AutoSize = true;
-            this.lblRecorridoPostOrden.Location = new System.Drawing.Point(233, 69);
+            this.lblRecorridoPostOrden.Location = new System.Drawing.Point(232, 64);
             this.lblRecorridoPostOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecorridoPostOrden.Name = "lblRecorridoPostOrden";
             this.lblRecorridoPostOrden.Size = new System.Drawing.Size(57, 13);
@@ -199,7 +203,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblInOrden
             // 
             this.lblInOrden.AutoSize = true;
-            this.lblInOrden.Location = new System.Drawing.Point(181, 45);
+            this.lblInOrden.Location = new System.Drawing.Point(180, 40);
             this.lblInOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInOrden.Name = "lblInOrden";
             this.lblInOrden.Size = new System.Drawing.Size(48, 13);
@@ -209,7 +213,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblPreOrden
             // 
             this.lblPreOrden.AutoSize = true;
-            this.lblPreOrden.Location = new System.Drawing.Point(173, 19);
+            this.lblPreOrden.Location = new System.Drawing.Point(172, 14);
             this.lblPreOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPreOrden.Name = "lblPreOrden";
             this.lblPreOrden.Size = new System.Drawing.Size(55, 13);
@@ -219,7 +223,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblRecorridoInOrden
             // 
             this.lblRecorridoInOrden.AutoSize = true;
-            this.lblRecorridoInOrden.Location = new System.Drawing.Point(233, 45);
+            this.lblRecorridoInOrden.Location = new System.Drawing.Point(232, 40);
             this.lblRecorridoInOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecorridoInOrden.Name = "lblRecorridoInOrden";
             this.lblRecorridoInOrden.Size = new System.Drawing.Size(57, 13);
@@ -229,7 +233,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblRecorridoPreOrden
             // 
             this.lblRecorridoPreOrden.AutoSize = true;
-            this.lblRecorridoPreOrden.Location = new System.Drawing.Point(233, 19);
+            this.lblRecorridoPreOrden.Location = new System.Drawing.Point(232, 14);
             this.lblRecorridoPreOrden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecorridoPreOrden.Name = "lblRecorridoPreOrden";
             this.lblRecorridoPreOrden.Size = new System.Drawing.Size(57, 13);
@@ -238,7 +242,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(104, 122);
+            this.button1.Location = new System.Drawing.Point(103, 117);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 23);
             this.button1.TabIndex = 15;
@@ -248,14 +252,14 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(40, 124);
+            this.txtBuscar.Location = new System.Drawing.Point(39, 119);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(58, 20);
             this.txtBuscar.TabIndex = 16;
             // 
             // btPodar
             // 
-            this.btPodar.Location = new System.Drawing.Point(384, 82);
+            this.btPodar.Location = new System.Drawing.Point(490, 82);
             this.btPodar.Name = "btPodar";
             this.btPodar.Size = new System.Drawing.Size(75, 23);
             this.btPodar.TabIndex = 17;
@@ -265,7 +269,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btPodarT
             // 
-            this.btPodarT.Location = new System.Drawing.Point(384, 116);
+            this.btPodarT.Location = new System.Drawing.Point(490, 116);
             this.btPodarT.Name = "btPodarT";
             this.btPodarT.Size = new System.Drawing.Size(75, 23);
             this.btPodarT.TabIndex = 18;
@@ -275,7 +279,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(384, 146);
+            this.button2.Location = new System.Drawing.Point(490, 146);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 19;
@@ -285,7 +289,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(320, 148);
+            this.textBox1.Location = new System.Drawing.Point(426, 148);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 20);
             this.textBox1.TabIndex = 20;
@@ -293,14 +297,14 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(320, 173);
+            this.textBox2.Location = new System.Drawing.Point(426, 173);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(58, 20);
             this.textBox2.TabIndex = 21;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(385, 170);
+            this.button3.Location = new System.Drawing.Point(491, 170);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 22;
@@ -310,7 +314,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(104, 152);
+            this.button4.Location = new System.Drawing.Point(103, 147);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(62, 23);
             this.button4.TabIndex = 23;
@@ -321,7 +325,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 91);
+            this.label1.Location = new System.Drawing.Point(175, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 24;
@@ -330,7 +334,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 91);
+            this.label2.Location = new System.Drawing.Point(235, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 25;
@@ -338,7 +342,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(23, 152);
+            this.button5.Location = new System.Drawing.Point(22, 147);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 26;
@@ -349,7 +353,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(176, 116);
+            this.label3.Location = new System.Drawing.Point(175, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 27;
@@ -358,7 +362,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(219, 116);
+            this.label4.Location = new System.Drawing.Point(218, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 28;
@@ -366,7 +370,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(303, 17);
+            this.button6.Location = new System.Drawing.Point(409, 17);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 29;
@@ -377,7 +381,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(256, 133);
+            this.label5.Location = new System.Drawing.Point(255, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 30;
@@ -386,7 +390,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(176, 133);
+            this.label6.Location = new System.Drawing.Point(175, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 31;
@@ -395,7 +399,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(176, 161);
+            this.label7.Location = new System.Drawing.Point(175, 156);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 32;
@@ -404,7 +408,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(259, 162);
+            this.label8.Location = new System.Drawing.Point(258, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 33;
@@ -412,7 +416,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(295, 45);
+            this.button7.Location = new System.Drawing.Point(401, 45);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 23);
             this.button7.TabIndex = 34;
@@ -420,11 +424,54 @@ namespace EDDemo.Estructuras_No_Lineales
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(401, 80);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 35;
+            this.button8.Text = "Completo";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(401, 111);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 36;
+            this.button9.Text = "Lleno";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(344, 85);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Completo";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(354, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Lleno";
+            // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 387);
+            this.ClientSize = new System.Drawing.Size(580, 455);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -506,5 +553,9 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

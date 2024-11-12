@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Linq;
+using static EDDemo.Estructuras_No_Lineales.ArbolBusqueda;
 
 
 //using GraphVizWrapper;
@@ -26,12 +27,15 @@ namespace EDDemo.Estructuras_No_Lineales
     {
         ArbolBusqueda miArbol;
         NodoBinario miRaiz;
-
+        ArbolBinarioCompleto verificadorCompleto;
+        ArbolBinarioLleno verificadorLleno;
         public frmArboles()
         {
             InitializeComponent();
             miArbol = new ArbolBusqueda();
             miRaiz = null;
+            verificadorCompleto = new ArbolBinarioCompleto();
+            verificadorLleno = new ArbolBinarioLleno();
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -322,6 +326,27 @@ namespace EDDemo.Estructuras_No_Lineales
             int cantidadNodos = miArbol.ContarNodos(miRaiz);
 
             label8.Text = "nodos " + cantidadNodos;
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            bool esCompleto = verificadorCompleto.EsCompleto(miArbol.RegresaRaiz());
+
+            // Mostrar el resultado en el label
+            label9.Text = esCompleto ? "El árbol es COMPLETO" : "El árbol NO es completo";
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            bool esLleno = verificadorLleno.EsLleno(miArbol.RegresaRaiz());
+
+            // Mostrar el resultado en el label
+            label10.Text = esLleno ? "El árbol es LLENO" : "El árbol NO es lleno";
         }
     }
     }

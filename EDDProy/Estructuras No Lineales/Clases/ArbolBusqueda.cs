@@ -313,7 +313,77 @@ namespace EDDemo.Estructuras_No_Lineales
             
             return 1 + nodosIzq + nodosDer;
         }
-        public void PreOrden(NodoBinario nodo)
+        public class ArbolBinarioCompleto
+        {
+            public bool EsCompleto(NodoBinario raiz)
+            {
+                if (raiz == null)
+                    return true;
+
+                int totalNodos = ContarNodos(raiz);
+                return EsCompletoRecursivo(raiz, 0, totalNodos);
+            }
+
+            private bool EsCompletoRecursivo(NodoBinario nodo, int indice, int totalNodos)
+            {
+                if (nodo == null)
+                    return true;
+
+               
+                if (indice >= totalNodos)
+                    return false;
+
+                
+                return EsCompletoRecursivo(nodo.Izq, 2 * indice + 1, totalNodos) &&
+                       EsCompletoRecursivo(nodo.Der, 2 * indice + 2, totalNodos);
+            }
+
+            private int ContarNodos(NodoBinario nodo)
+            {
+                if (nodo == null)
+                    return 0;
+                return 1 + ContarNodos(nodo.Izq) + ContarNodos(nodo.Der);
+            }
+        }
+        public class ArbolBinarioLleno
+        {
+            public bool EsLleno(NodoBinario raiz)
+            {
+                if (raiz == null)
+                    return true;
+
+                int altura = ObtenerAltura(raiz);
+                return EsLlenoRecursivo(raiz, 0, altura);
+            }
+
+            private bool EsLlenoRecursivo(NodoBinario nodo, int nivelActual, int altura)
+            {
+                if (nodo == null)
+                    return true;
+
+                
+                if (nodo.Izq == null && nodo.Der == null)
+                    return nivelActual == altura - 1;
+
+                
+                if (nodo.Izq == null || nodo.Der == null)
+                    return false;
+
+                
+                return EsLlenoRecursivo(nodo.Izq, nivelActual + 1, altura) &&
+                       EsLlenoRecursivo(nodo.Der, nivelActual + 1, altura);
+            }
+
+            private int ObtenerAltura(NodoBinario nodo)
+            {
+                if (nodo == null)
+                    return 0;
+                return 1 + Math.Max(ObtenerAltura(nodo.Izq), ObtenerAltura(nodo.Der));
+            }
+        }
+    
+
+    public void PreOrden(NodoBinario nodo)
 
         {
             if (nodo == null)
