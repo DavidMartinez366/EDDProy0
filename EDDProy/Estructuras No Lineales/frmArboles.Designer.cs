@@ -447,7 +447,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(344, 85);
+            this.label9.Location = new System.Drawing.Point(301, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 37;
@@ -457,7 +457,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(354, 116);
+            this.label10.Location = new System.Drawing.Point(310, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 13);
             this.label10.TabIndex = 38;
